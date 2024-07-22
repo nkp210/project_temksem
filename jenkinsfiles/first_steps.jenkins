@@ -4,14 +4,14 @@ properties([disableConcurrentBuilds()])
 
 pipeline {
     agent { 
-        label 'master'
+        label 'worker-ubuntu'
         }
     options {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
     }
     stages {
-        stage("First step") {
+        stage("First stage 12") {
             steps {
                 sh 'ssh jenkins@192.168.118.177 \'hostname\''
             }
