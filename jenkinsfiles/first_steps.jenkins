@@ -11,7 +11,7 @@ pipeline {
         timestamps()
     }
     stages {
-        stage("First stage 12") {
+        stage("First stage 1234") {
             steps {
                 sh 'ssh jenkins@192.168.118.177 \'hostname\''
             }
